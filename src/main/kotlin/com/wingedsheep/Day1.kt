@@ -1,4 +1,4 @@
-package com.wingedsheep.day1
+package com.wingedsheep
 
 import com.wingedsheep.util.ResourceFileReader
 import kotlin.math.absoluteValue
@@ -7,7 +7,7 @@ import kotlin.math.min
 fun main() {
     val resourceFileReader = ResourceFileReader()
     val inputParser = InputParser(resourceFileReader)
-    val solver = Solver()
+    val solver = Day1Solver()
 
     val rotations = inputParser.parseInput("/day1/input.txt")
 
@@ -18,7 +18,7 @@ fun main() {
     println("Code 2 is: $code2")
 }
 
-class Solver {
+class Day1Solver {
 
     fun crackCode1(rotations: List<Rotation>): Int {
         val state = Problem1State()

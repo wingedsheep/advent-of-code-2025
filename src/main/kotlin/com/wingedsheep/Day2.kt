@@ -1,16 +1,16 @@
-package com.wingedsheep.day2
+package com.wingedsheep
 
 import com.wingedsheep.util.ResourceFileReader
 import kotlin.math.absoluteValue
 
 fun main() {
     val resourceFileReader = ResourceFileReader()
-    val solver = Solver(resourceFileReader)
+    val solver = Day2Solver(resourceFileReader)
     solver.solvePart1()
     solver.solvePart2()
 }
 
-class Solver(private val resourceFileReader: ResourceFileReader) {
+class Day2Solver(private val resourceFileReader: ResourceFileReader) {
 
     fun solvePart1() {
         val pairs = parseInput(resourceFileReader)

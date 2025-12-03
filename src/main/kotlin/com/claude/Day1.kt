@@ -1,4 +1,4 @@
-package com.claude.day1
+package com.claude
 
 fun main() {
     val rotations = object {}.javaClass.getResourceAsStream("/day1/input.txt")!!
