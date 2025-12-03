@@ -1,7 +1,5 @@
 package com.wingedsheep.util
 
-import java.nio.charset.StandardCharsets
-
 class ResourceFileReader {
 
     fun readLinesFromResource(path: String): List<String> =
