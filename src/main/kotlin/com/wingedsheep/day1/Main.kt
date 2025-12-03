@@ -7,11 +7,11 @@ fun main() {
     val inputParser = InputParser(resourceFileReader)
     val algorithm = Day1Algorithm()
 
-    val rotations1 = inputParser.parseInput("/day1/input.txt")
-    val code1 = algorithm.crackCode1(rotations1)
+    val rotations = inputParser.parseInput("/day1/input.txt")
+
+    val code1 = algorithm.crackCode1(rotations)
     println("Code 1 is: $code1")
 
-    val rotations2 = inputParser.parseInput("/day1/input2.txt")
-    val code2 = algorithm.crackCode2(rotations2)
+    val code2 = algorithm.crackCode2(rotations)
     println("Code 2 is: $code2")
 }
