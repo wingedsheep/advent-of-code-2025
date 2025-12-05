@@ -41,7 +41,7 @@ class Day3Solver(val resourceFileReader: ResourceFileReader) {
             pickedNumbers.add(bestNumberWithIndex.number)
             indexOfLastNumberPicked = bestNumberWithIndex.index
         }
-        return pickedNumbers.fold("", { acc, number -> acc + number }).toLong()
+        return pickedNumbers.fold("") { acc, number -> acc + number }.toLong()
     }
 
     private fun findBestNumberWithIndex(numbers: List<Int>, numbersRemaining: Int, indexOfLastNumberPicked: Int): NumberWithIndex {
