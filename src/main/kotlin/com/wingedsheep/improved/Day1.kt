@@ -1,12 +1,8 @@
 package com.wingedsheep.improved
 
 import com.wingedsheep.util.ResourceFileReader
-import javax.swing.text.Position
-import kotlin.math.PI
 import kotlin.math.absoluteValue
 import kotlin.math.ceil
-import kotlin.math.min
-import kotlin.math.roundToInt
 
 fun main() {
     val resourceFileReader = ResourceFileReader()
