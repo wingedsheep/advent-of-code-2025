@@ -41,7 +41,6 @@ class Day5Solver(private val resourceFileReader: ResourceFileReader) {
         while (mergedRanges) {
             val sizeBeforeMerge = result.size
             result = mergeFirst(result)
-            result.sortedBy { it.first }
             mergedRanges = sizeBeforeMerge > result.size
         }
         return result
