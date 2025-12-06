@@ -1,3 +1,5 @@
+package com.claude
+
 fun main() {
     val banks = object {}.javaClass.getResourceAsStream("/day3/input.txt")!!
         .bufferedReader()

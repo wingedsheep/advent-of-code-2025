@@ -1,3 +1,5 @@
+package com.claude
+
 fun main() {
     val lines = object {}.javaClass.getResourceAsStream("/day6/input.txt")!!
         .bufferedReader()

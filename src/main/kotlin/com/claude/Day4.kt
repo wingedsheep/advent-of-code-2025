@@ -1,3 +1,5 @@
+package com.claude
+
 fun main() {
     val grid = object {}.javaClass.getResourceAsStream("/day4/input.txt")!!
         .bufferedReader()
