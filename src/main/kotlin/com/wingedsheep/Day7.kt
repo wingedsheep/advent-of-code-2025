@@ -13,17 +13,10 @@ fun main() {
 class Day7Solver(private val resourceFileReader: ResourceFileReader) {
 
     fun solve() {
-        val beams = listOf(2, 3, 3)
-        val splitterIndices = setOf(3)
-
-        val result = beams.filter { splitterIndices.contains(it) }
-        println("result: $result")
-
-        val splits = parse().fireTachyonBeam().splits
+Remo        val splits = parse().fireTachyonBeam().splits
         println("Number of splits: $splits")
 
         val graph = parse().fireQuantumTachyonBeam().graph
-        val nodes = graph.nodes
         graph.processGraph()
         println("Number of quantum splits: ${graph.startNode.totalPathsFromHere!! - 1}")
     }
@@ -135,17 +128,12 @@ class Day7Solver(private val resourceFileReader: ResourceFileReader) {
                 val beamsHittingSplitters = beams.intersect(splitterIndices)
                 val beamsNotHittingSplitters = beams.minus(splitterIndices)
 
-                println(beamsHittingSplitters)
-
                 val newBeams = mutableSetOf<Int>()
                 beamsHittingSplitters.toSet().forEach { beamIndex ->
                     newBeams.add(beamIndex - 1)
                     newBeams.add(beamIndex + 1)
                 }
                 newBeams.addAll(beamsNotHittingSplitters)
-
-                println(newBeams)
-                println("---")
 
                 return BeamState(this.row + 1, newBeams, this.splits + beamsHittingSplitters.size)
             }
