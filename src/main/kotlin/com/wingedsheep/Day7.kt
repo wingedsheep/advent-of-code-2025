@@ -13,7 +13,7 @@ fun main() {
 class Day7Solver(private val resourceFileReader: ResourceFileReader) {
 
     fun solve() {
-Remo        val splits = parse().fireTachyonBeam().splits
+        val splits = parse().fireTachyonBeam().splits
         println("Number of splits: $splits")
 
         val graph = parse().fireQuantumTachyonBeam().graph
